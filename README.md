@@ -37,6 +37,15 @@ For installing Frontend
 Your frontend runs at local port http://localhost:5173/
 ```
 
+## Features currently implemented are :-
+
+1. User Registration
+2. User Login
+3. User Dashboard
+4. Dashboard with Pricing Datas
+5. Backend with MongoDB to save user datas
+6. Session to store user datas when logged in and for persisting in frontend
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
