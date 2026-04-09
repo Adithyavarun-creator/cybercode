@@ -37,18 +37,23 @@ const Login = () => {
       try {
         setLoader(true);
 
-        const res = await toast.promise(loginUser(values), {
-          loading: "Signing in...",
-          success: "Login successful 🎉",
-          error: "Invalid credentials ❌",
-        });
+        const [res] = await toast.promise(
+          Promise.all([
+            loginUser(values),
+            new Promise((resolve) => setTimeout(resolve, 5000)),
+          ]),
+          {
+            loading: "Signing in...",
+            success: "Login successful 🎉",
+            error: "Invalid credentials ❌",
+          },
+        );
 
         localStorage.setItem("user", JSON.stringify(res));
 
         navigate("/user-dashboard");
       } catch (err) {
         console.error(err);
-
         navigate("/login");
       } finally {
         setLoader(false);

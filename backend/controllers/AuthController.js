@@ -33,6 +33,9 @@ const signup = async (req, res, next) => {
   });
   try {
     await newUser.save();
+
+    // sendWelcomeEmail(newUser).catch((err) => console.log("Email error:", err));
+    // sendWelcomeEmail(newUser).catch((err) => console.log("Email error:", err));
     res.status(201).json("User created successfully!");
   } catch (error) {
     next(error);

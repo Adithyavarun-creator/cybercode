@@ -3,7 +3,7 @@ export const Button = ({ title, width, type = "submit", icon }) => {
     <button
       type={type}
       style={{ width }}
-      className="flex flex-row items-center gap-2 bg-primary px-10 py-3 text-center text-white font-semibold cursor-pointer rounded-xl capitalize
+      className="flex flex-row items-center justify-center gap-2 bg-primary px-10 py-3 text-center text-white font-semibold cursor-pointer rounded-xl capitalize
       hover:bg-blue-500 transition-all duration-100 ease-in-out"
     >
       {title} {icon ? icon : ""}

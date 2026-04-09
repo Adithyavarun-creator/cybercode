@@ -55,15 +55,29 @@ const Register = () => {
     onSubmit: async (values) => {
       // eslint-disable-next-line no-unused-vars
       const { confirmPassword, ...data } = values;
+
       setLoader(true);
-      const res = await toast.promise(registerUser(data), {
-        loading: "Saving...",
-        success: "You are Registered successfully with your details 🎉",
-        error: "Failed to register ❌",
-      });
-      console.log("Saved Response:", res);
-      navigate("/login");
-      setLoader(false);
+
+      try {
+        // eslint-disable-next-line no-unused-vars
+        const res = await toast.promise(
+          Promise.all([
+            registerUser(data),
+            new Promise((resolve) => setTimeout(resolve, 5000)),
+          ]),
+          {
+            loading: "Saving...",
+            success: "You are Registered successfully with your details 🎉",
+            error: "Failed to register ❌",
+          },
+        );
+
+        navigate("/login");
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoader(false);
+      }
     },
   });
 
