@@ -14,6 +14,7 @@ import Logo from "./Logo";
 const Nav = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   // console.log(user);
+  // logged user
   const navigate = useNavigate();
 
   // eslint-disable-next-line no-unused-vars
