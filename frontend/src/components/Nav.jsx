@@ -67,7 +67,7 @@ const Nav = () => {
       {/* <nav className="flex h-16 items-center justify-between px-8 bg-primary"> */}
       <nav
         className="hidden md:flex h-16 items-center justify-between px-12 
-bg-white/10 backdrop-blur-md border-b border-white/20 
+bg-blue-950/10 backdrop-blur-md border-b border-white/20 
 shadow-lg fixed top-0 left-0 w-full z-50"
       >
         <Link to="/" className="flex flex-1">
@@ -157,7 +157,7 @@ shadow-lg fixed top-0 left-0 w-full z-50"
 
       {/* mobile nav */}
       <nav className="flex relative md:hidden flex-col">
-        <div className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-blue-950/10 flex justify-between items-center p-8 border-b border-gray-800">
+        <div className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-blue-950/10 flex justify-between items-center p-4 border-b border-gray-800">
           <Link to="/">
             <Logo />
           </Link>
@@ -170,67 +170,71 @@ shadow-lg fixed top-0 left-0 w-full z-50"
           </div>
         </div>
         {mobileNav && (
-          <div className="absolute flex flex-col gap-6 items-center justify-center w-full h-screen bg-black z-100">
-            <div className="flex flex-col gap-8 p-6">
-              <div
-                className="flex justify-end absolute p-6 top-0 right-0"
+          <div className="fixed inset-0 flex flex-col bg-black z-50">
+            <div className="flex justify-end p-4">
+              <MdClose
+                className="w-7 h-7 text-white cursor-pointer"
                 onClick={() => setMobileNav((prev) => !prev)}
-              >
-                <MdClose className="w-8 h-8 font-extrabold text-white cursor-pointer" />
-              </div>
+              />
+            </div>
 
-              <div className="mt-6 flex flex-col items-center justify-center gap-14">
-                <Link
-                  to="/register"
-                  onClick={() => setMobileNav((prev) => !prev)}
-                  className="text-white text-3xl font-semibold"
+            <div className="flex flex-col items-center justify-center flex-1 gap-8 px-4 text-center">
+              <Link
+                to="/register"
+                onClick={() => setMobileNav(false)}
+                className="text-white text-xl sm:text-2xl font-semibold"
+              >
+                Register
+              </Link>
+
+              <Link
+                to="/login"
+                onClick={() => setMobileNav(false)}
+                className="text-white text-xl sm:text-2xl font-semibold"
+              >
+                Login
+              </Link>
+
+              <a
+                href="#services"
+                onClick={() => setMobileNav(false)}
+                className="text-white text-xl sm:text-2xl font-semibold"
+              >
+                Services
+              </a>
+
+              <a
+                href="#teams"
+                onClick={() => setMobileNav(false)}
+                className="text-white text-xl sm:text-2xl font-semibold"
+              >
+                Teams
+              </a>
+
+              <a
+                href="#about"
+                onClick={() => setMobileNav(false)}
+                className="text-white text-xl sm:text-2xl font-semibold"
+              >
+                About
+              </a>
+
+              <a
+                href="#contact"
+                onClick={() => setMobileNav(false)}
+                className="text-white text-xl sm:text-2xl font-semibold"
+              >
+                Contact
+              </a>
+
+              {user && (
+                <span
+                  className="text-white text-xl sm:text-2xl font-semibold"
+                  onClick={handleLogout}
                 >
-                  Register
-                </Link>
-                <Link
-                  to="/login"
-                  onClick={() => setMobileNav((prev) => !prev)}
-                  className="text-white text-3xl font-semibold"
-                >
-                  Login
-                </Link>
-                <a
-                  href="#services"
-                  onClick={() => setMobileNav((prev) => !prev)}
-                  className="text-white text-3xl font-semibold"
-                >
-                  Services
-                </a>
-                <a
-                  href="#teams"
-                  onClick={() => setMobileNav((prev) => !prev)}
-                  className="text-white text-3xl font-semibold"
-                >
-                  Teams
-                </a>
-                <a
-                  href="#about"
-                  onClick={() => setMobileNav((prev) => !prev)}
-                  className="text-white text-3xl font-semibold"
-                >
-                  About
-                </a>
-                <a
-                  href="#contact"
-                  onClick={() => setMobileNav((prev) => !prev)}
-                  className="text-white text-3xl font-semibold"
-                >
-                  Contact
-                </a>
-                {user && (
-                  <span
-                    className="text-white text-3xl font-semibold"
-                    onClick={handleLogout}
-                  >
-                    Logout
-                  </span>
-                )}
-              </div>
+                  Logout
+                </span>
+              )}
             </div>
           </div>
         )}
