@@ -11,8 +11,8 @@ const Home = () => {
     <div className="flex flex-col gap-4">
       <Header />
       <Services />
-      {/*  <Process />
-      <Trust />
+      <Process />
+      {/*<Trust />
       <Questions />
       <Team />
       <Footer /> */}
