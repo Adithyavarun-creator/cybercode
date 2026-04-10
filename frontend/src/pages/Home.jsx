@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <div className="flex flex-col gap-4">
       <Header />
-      {/* <Services />
-      <Process />
+      <Services />
+      {/*  <Process />
       <Trust />
       <Questions />
       <Team />
