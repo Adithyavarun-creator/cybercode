@@ -68,10 +68,7 @@ const Team = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4">
-            <Button
-              title="Start Security Assessment"
-              icon={<GrShieldSecurity />}
-            />
+            <Button title="Start Security Assessment" />
             <button
               className="bg-black text-white text-sm px-8 py-3 font-semibold rounded-2xl cursor-pointer border border-gray-500
             hover:bg-white hover:text-black transition-all duration-200 ease-in"

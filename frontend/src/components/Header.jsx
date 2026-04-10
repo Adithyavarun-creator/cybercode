@@ -5,7 +5,7 @@ import { MdOutlineSecurity } from "react-icons/md";
 
 const Header = () => {
   return (
-    <header className="mt-0 md:mt-16 flex flex-col relative">
+    <header className="mt-24 md:mt-16 flex flex-col relative">
       <div>
         <img
           src={HeaderImage}
@@ -30,7 +30,7 @@ const Header = () => {
           </article>
         </div>
         <div>
-          <Button title="Schedule Consultation" icon={<FaCalendarCheck />} />
+          <Button title="Schedule Consultation" />
         </div>
       </div>
 
