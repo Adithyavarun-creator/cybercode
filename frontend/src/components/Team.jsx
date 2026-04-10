@@ -73,15 +73,15 @@ const Team = () => {
         </div>
       </div>
 
-      {/* <div className="flex flex-col justify-center items-center gap-6 px-6 md:px-10">
-        <div className="mt-10 md:mt-20 flex flex-col gap-6 p-6 rounded-2xl border border-blue-950 w-full md:w-[80%] h-max md:h-[360px]">
-          <div className="mt-6 md:mt-14">
-            <h2 className="text-white text-center text-3xl font-bold">
+      <div className="flex flex-col justify-center items-center gap-6 px-6 md:px-10">
+        <div className="mt-10 md:mt-20 flex flex-col gap-6 p-3 md:p-6 rounded-2xl border border-blue-950 w-full md:w-[80%] h-max md:h-[360px]">
+          <div className="mt-3 md:mt-10">
+            <h2 className="text-white text-center text-sm md:text-3xl font-bold">
               Ready to Secure Your Enterprise?
             </h2>
           </div>
-          <div className="w-[300px] md:w-[600px] mx-auto">
-            <span className="text-gray-500 text-xl">
+          <div className="w-auto md:w-[600px] mx-auto">
+            <span className="text-gray-500 text-xs md:text-xl">
               Let our team of security experts protect your organization from
               evolving cyber threats. Get a free security assessment today.
             </span>
@@ -97,7 +97,7 @@ const Team = () => {
             </button>
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
