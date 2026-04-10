@@ -114,7 +114,9 @@ const Register = () => {
                 className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               {formik.touched.firstname && formik.errors.firstname && (
-                <span className="text-red-500">{formik.errors.firstname}</span>
+                <span className="text-xs md:text-xl text-red-500">
+                  {formik.errors.firstname}
+                </span>
               )}
             </div>
 
@@ -130,7 +132,9 @@ const Register = () => {
                 className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               {formik.touched.surname && formik.errors.surname && (
-                <span className="text-red-500">{formik.errors.surname}</span>
+                <span className="text-xs md:text-xl text-red-500">
+                  {formik.errors.surname}
+                </span>
               )}
             </div>
 
@@ -148,7 +152,9 @@ const Register = () => {
                 className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               {formik.touched.email && formik.errors.email && (
-                <span className="text-red-500">{formik.errors.email}</span>
+                <span className="text-xs md:text-xl text-red-500">
+                  {formik.errors.email}
+                </span>
               )}
             </div>
 
@@ -164,7 +170,9 @@ const Register = () => {
                 className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               {formik.touched.company && formik.errors.company && (
-                <span className="text-red-500">{formik.errors.company}</span>
+                <span className="text-xs md:text-xl text-red-500">
+                  {formik.errors.company}
+                </span>
               )}
             </div>
 

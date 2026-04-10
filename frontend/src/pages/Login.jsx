@@ -88,7 +88,9 @@ const Login = () => {
                 className="h-10 text-sm md:text-xl w-[200px] md:w-[400px] pl-2 text-white rounded-xl border border-gray-400"
               />
               {formik.touched.email && formik.errors.email && (
-                <span className="text-red-500">{formik.errors.email}</span>
+                <span className="text-xs md:text-xl text-red-500">
+                  {formik.errors.email}
+                </span>
               )}
             </div>
 
@@ -103,9 +105,9 @@ const Login = () => {
                 value={formik.values.password || ""}
                 className="h-10 text-sm md:text-xl w-[200px] md:w-[400px] pl-2 text-white rounded-xl border border-gray-400"
               />
-              <p className="error">
+              <span className="text-xs md:text-xl text-red-500">
                 {formik.touched.password && formik.errors.password}
-              </p>
+              </span>
             </div>
           </div>
           <div className="mt-12 flex flex-col justify-center items-center">
