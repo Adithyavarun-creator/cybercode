@@ -88,18 +88,18 @@ const Register = () => {
   }
 
   return (
-    <section className="hidden md:flex flex-col gap-10 justify-center items-center p-20">
+    <section className="flex flex-col gap-10 justify-center items-center p-20">
       <div>
         <h2 className="text-3xl text-white font-semibold">Register</h2>
       </div>
-      <div className="border rounded-2xl h-max w-[800px] p-6">
+      <div className="border rounded-2xl h-max w-full md:w-[800px] p-6">
         <form
           onSubmit={(e) => {
             e.preventDefault();
             formik.handleSubmit(e);
           }}
         >
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col">
               <label className="text-white">Firstname</label>
               <input
@@ -263,9 +263,9 @@ const Register = () => {
           </div>
           <div className="mt-12 flex justify-center items-center">
             {loader ? (
-              <SpinnerButton width="75%" />
+              <SpinnerButton />
             ) : (
-              <Button title="Register" button type="submit" width="75%" />
+              <Button title="Register" button type="submit" />
             )}
           </div>
         </form>

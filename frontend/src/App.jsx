@@ -8,7 +8,7 @@ import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-    <div className="hidden md:block">
+    <div className="">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -12,10 +12,10 @@ const Dashboard = () => {
 
   return (
     <section className="flex flex-row">
-      <div className="flex w-[300px]">
+      <div className="flex md:w-[300px]">
         <Sidebar />
       </div>
-      <div>
+      <div className="w-full">
         <DashboardContent />
       </div>
     </section>

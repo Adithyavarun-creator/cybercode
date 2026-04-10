@@ -62,11 +62,11 @@ const Login = () => {
   }
 
   return (
-    <section className="hidden md:flex  flex-col gap-10 justify-center items-center p-20">
+    <section className="flex flex-col gap-10 justify-center items-center p-20">
       <div>
         <h2 className="text-3xl text-white font-semibold">Login</h2>
       </div>
-      <div className="border rounded-2xl h-max w-[800px] p-6">
+      <div className="border rounded-2xl h-max w-[400px] md:w-[800px] p-6">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -83,7 +83,7 @@ const Login = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email || ""}
-                className="h-10 w-[400px] pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-[300px] md:w-[400px] pl-2 text-white rounded-xl border border-gray-400"
               />
               {formik.touched.email && formik.errors.email && (
                 <span className="text-red-500">{formik.errors.email}</span>
@@ -99,7 +99,7 @@ const Login = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.password || ""}
-                className="h-10 w-[400px] pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-[300px] md:w-[400px] pl-2 text-white rounded-xl border border-gray-400"
               />
               <p className="error">
                 {formik.touched.password && formik.errors.password}
@@ -108,9 +108,9 @@ const Login = () => {
           </div>
           <div className="mt-12 flex flex-col justify-center items-center">
             {loader ? (
-              <SpinnerButton width="400px" />
+              <SpinnerButton />
             ) : (
-              <Button title="Login" button type="submit" width="400px" />
+              <Button title="Login" type="submit" />
             )}
           </div>
         </form>

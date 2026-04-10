@@ -15,11 +15,11 @@ const DashboardContent = () => {
   }, []);
 
   return (
-    <section className="text-white text-2xl mt-20 flex flex-col gap-4">
+    <section className="text-white text-2xl mt-20 flex flex-col justify-center items-center gap-4">
       <div className="flex justify-center items-center mt-4">
         <h2 className="mx-auto">Pick a Plan that benefits you </h2>
       </div>
-      <div className="grid grid-cols-3 justify-center gap-10 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-10 mt-10">
         <div className="flex flex-col justify-center items-center gap-3 border text-sm border-gray-600 w-[250px] rounded-2xl px-4 py-4 cursor-pointer">
           <div>
             <h2 className="text-2xl font-semibold font-secondary">Free</h2>
@@ -45,7 +45,7 @@ const DashboardContent = () => {
           </div>
           <div className="mt-2">
             {/* <button>Get Started</button> */}
-            <Button title="Get Started" width="100%" />
+            <Button title="Get Started" />
           </div>
         </div>
 
@@ -74,7 +74,7 @@ const DashboardContent = () => {
           </div>
           <div className="mt-2">
             {/* <button>Get Started</button> */}
-            <Button title="Get Started" width="100%" />
+            <Button title="Get Started" className="w-[100px]" />
           </div>
           {showCrown && (
             <div className="absolute -top-8 right-0">
@@ -108,7 +108,7 @@ const DashboardContent = () => {
           </div>
           <div className="mt-2">
             {/* <button>Get Started</button> */}
-            <Button title="Get Started" width="100%" />
+            <Button title="Get Started" />
           </div>
           {showCrown && (
             <div className="absolute -top-8 right-0">

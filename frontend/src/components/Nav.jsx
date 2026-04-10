@@ -6,7 +6,7 @@ import { LuLogOut } from "react-icons/lu";
 import toast from "react-hot-toast";
 import { logoutUser } from "../api/api";
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import { MdSpaceDashboard } from "react-icons/md";
+import { MdSpaceDashboard, MdOutlineMenu, MdClose } from "react-icons/md";
 import Logo from "./Logo";
 
 // import { logoutUser } from "../api/api";
@@ -19,6 +19,8 @@ const Nav = () => {
 
   // eslint-disable-next-line no-unused-vars
   const [dropdown, setDropdown] = useState(false);
+  const [mobileNav, setMobileNav] = useState(false);
+
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -64,7 +66,7 @@ const Nav = () => {
     <>
       {/* <nav className="flex h-16 items-center justify-between px-8 bg-primary"> */}
       <nav
-        className="flex h-16 items-center justify-between px-12 
+        className="hidden md:flex h-16 items-center justify-between px-12 
 bg-white/10 backdrop-blur-md border-b border-white/20 
 shadow-lg fixed top-0 left-0 w-full z-50"
       >
@@ -152,6 +154,53 @@ shadow-lg fixed top-0 left-0 w-full z-50"
           </div>
         </div>
       )}
+
+      {/* mobile nav */}
+      <nav className="flex relative md:hidden flex-col">
+        <div className="flex justify-between items-center p-8 border border-gray-800">
+          <div>
+            <Logo />
+          </div>
+          <div>
+            <MdOutlineMenu
+              className="w-8 h-8 font-extrabold text-white cursor-pointer"
+              onClick={() => setMobileNav((prev) => !prev)}
+            />
+          </div>
+        </div>
+
+        {mobileNav && (
+          <div className="absolute flex flex-col gap-6 items-center justify-center w-full h-screen bg-black z-100">
+            <div className="flex flex-col gap-8 p-6">
+              <div
+                className="flex justify-end absolute p-6 top-0 right-0"
+                onClick={() => setMobileNav((prev) => !prev)}
+              >
+                <MdClose className="w-8 h-8 font-extrabold text-white cursor-pointer" />
+              </div>
+
+              <div className="mt-6 flex flex-col items-center justify-center gap-14">
+                <span className="text-white text-3xl font-semibold">
+                  Services
+                </span>
+                <span className="text-white text-3xl font-semibold">Teams</span>
+                <span className="text-white text-3xl font-semibold">About</span>
+                <span className="text-white text-3xl font-semibold">
+                  Contact
+                </span>
+                {user && (
+                  <span
+                    className="text-white text-3xl font-semibold"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </nav>
     </>
   );
 };

@@ -15,14 +15,14 @@ const Questions = () => {
         <h2 className="text-3xl text-white font-semibold">
           Frequently Asked Questions
         </h2>
-        <span className="text-xl text-gray-500">
+        <span className="text-xl text-gray-500 text-center md:text-start">
           Find answers to common questions about our services and security
           solutions
         </span>
       </div>
 
       <div className="flex flex-col items-center justify-center gap-4">
-        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-[70%] px-6 py-3">
+        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-full md:w-[70%] px-6 py-3">
           <div className="flex flex-row gap-2 items-center justify-between text-white">
             <span
               className="font-semibold cursor-pointer"
@@ -52,7 +52,7 @@ const Questions = () => {
           )}
         </div>
 
-        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-[70%] px-6 py-3">
+        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-full md:w-[70%] px-6 py-3">
           <div className="flex flex-row gap-2 items-center justify-between text-white">
             <span
               className="font-semibold cursor-pointer"
@@ -81,7 +81,7 @@ const Questions = () => {
           )}
         </div>
 
-        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-[70%] px-6 py-3">
+        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-full md:w-[70%] px-6 py-3">
           <div className="flex flex-row gap-2 items-center justify-between text-white">
             <span
               className="font-semibold cursor-pointer"
@@ -110,7 +110,7 @@ const Questions = () => {
           )}
         </div>
 
-        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-[70%] px-6 py-3">
+        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-full md:w-[70%] px-6 py-3">
           <div className="flex flex-row gap-2 items-center justify-between text-white">
             <span
               className="font-semibold cursor-pointer"
@@ -139,7 +139,7 @@ const Questions = () => {
           )}
         </div>
 
-        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-[70%] px-6 py-3">
+        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-full md:w-[70%] px-6 py-3">
           <div className="flex flex-row gap-2 items-center justify-between text-white">
             <span
               className="font-semibold cursor-pointer"
@@ -167,7 +167,7 @@ const Questions = () => {
           )}
         </div>
 
-        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-[70%] px-6 py-3">
+        <div className="flex flex-col gap-2 border border-gray-800 rounded-2xl w-full md:w-[70%] px-6 py-3">
           <div className="flex flex-row gap-2 items-center justify-between text-white">
             <span
               className="font-semibold cursor-pointer"

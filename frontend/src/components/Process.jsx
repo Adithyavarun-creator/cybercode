@@ -5,13 +5,13 @@ export const Process = () => {
         <h2 className="text-3xl text-white font-semibold">
           Our Security Process
         </h2>
-        <span className="text-xl text-gray-500">
+        <span className="text-xl text-gray-500 text-center md:text-start">
           A proven six-step approach to building enterprise-grade security for
           your organization
         </span>
       </div>
 
-      <div className="mt-4 grid grid-cols-2 gap-10">
+      <div className="mt-10 md:mt-4 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10">
         <div className="flex cursor-pointer gap-8  text-white px-6 py-4 rounded-2xl">
           <div className="mt-2">
             <span className="w-10 h-10 text-primary p-2 font-semibold text-xl bg-blue-950 rounded-3xl">
