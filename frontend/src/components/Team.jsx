@@ -74,7 +74,7 @@ const Team = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center gap-6 px-6 md:px-10">
-        <div className="mt-10 md:mt-20 flex flex-col gap-6 p-3 md:p-6 rounded-2xl border border-blue-950 w-full md:w-[80%] h-max md:h-[360px]">
+        <div className="mt-10 md:mt-20 flex flex-col gap-6 p-6 rounded-2xl border border-blue-950 w-full md:w-[80%] h-max md:h-[360px]">
           <div className="mt-3 md:mt-10">
             <h2 className="text-white text-center text-sm md:text-3xl font-bold">
               Ready to Secure Your Enterprise?

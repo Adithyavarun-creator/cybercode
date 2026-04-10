@@ -15,7 +15,7 @@ const Home = () => {
       <Trust />
       <Questions />
       <Team />
-      {/* <Footer />  */}
+      <Footer />
     </div>
   );
 };
