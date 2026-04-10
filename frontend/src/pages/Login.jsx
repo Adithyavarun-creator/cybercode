@@ -64,9 +64,11 @@ const Login = () => {
   return (
     <section className="flex flex-col gap-10 justify-center items-center p-20">
       <div>
-        <h2 className="text-3xl text-white font-semibold">Login</h2>
+        <h2 className="text-xl md:text-3xl mt-10 md:mt-0 text-white font-semibold">
+          Login
+        </h2>
       </div>
-      <div className="border rounded-2xl h-max w-[400px] md:w-[800px] p-6">
+      <div className="border rounded-2xl h-max w-auto md:w-[800px] p-6">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -75,7 +77,7 @@ const Login = () => {
         >
           <div className="flex flex-col justify-center items-center gap-6">
             <div className="flex flex-col">
-              <label className="text-white">Email Address*</label>
+              <label className="text-xs text-white">Email Address*</label>
               <input
                 type="email"
                 name="email"
@@ -83,7 +85,7 @@ const Login = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email || ""}
-                className="h-10 w-[300px] md:w-[400px] pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 text-sm md:text-xl w-[200px] md:w-[400px] pl-2 text-white rounded-xl border border-gray-400"
               />
               {formik.touched.email && formik.errors.email && (
                 <span className="text-red-500">{formik.errors.email}</span>
@@ -91,7 +93,7 @@ const Login = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-white">Password</label>
+              <label className="text-xs text-white">Password</label>
               <input
                 type="password"
                 name="password"
@@ -99,7 +101,7 @@ const Login = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.password || ""}
-                className="h-10 w-[300px] md:w-[400px] pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 text-sm md:text-xl w-[200px] md:w-[400px] pl-2 text-white rounded-xl border border-gray-400"
               />
               <p className="error">
                 {formik.touched.password && formik.errors.password}
@@ -114,9 +116,9 @@ const Login = () => {
             )}
           </div>
         </form>
-        <div className="mt-2 flex justify-center items-center cursor-pointer">
-          <span className="text-white">
-            Do not have an account ?{" "}
+        <div className="mt-2  flex justify-center items-center cursor-pointer">
+          <span className="text-white text-xs md:text-sm">
+            Do not have an account ? &nbsp;
             <Link to="/register" className="text-primary">
               Register
             </Link>

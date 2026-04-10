@@ -66,7 +66,7 @@ const Nav = () => {
     <>
       {/* <nav className="flex h-16 items-center justify-between px-8 bg-primary"> */}
       <nav
-        className="hidden md:flex h-16 items-center justify-between px-12 
+        className="hidden md:flex h-16 items-center justify-between px-12 py-10
 bg-blue-950/10 backdrop-blur-md border-b border-white/20 
 shadow-lg fixed top-0 left-0 w-full z-50"
       >

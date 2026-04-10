@@ -4,13 +4,13 @@ const Footer = () => {
   return (
     <>
       <footer id="contact" className="flex flex-col gap-10 px-6 md:px-14 mb-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 justify-between gap-8">
-          <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 justify-between items-center gap-8">
+          <div className="flex flex-col gap-1 md:gap-4">
             <div>
               <Logo />
             </div>
             <div>
-              <span className="text-sm md:text-xl text-gray-600">
+              <span className="text-xs md:text-sm text-gray-600">
                 Enterprise cybersecurity solutions you can trust.
               </span>
             </div>

@@ -90,9 +90,11 @@ const Register = () => {
   return (
     <section className="flex flex-col gap-10 justify-center items-center p-20">
       <div>
-        <h2 className="text-3xl text-white font-semibold">Register</h2>
+        <h2 className="text-sm md:text-3xl text-white font-semibold">
+          Register
+        </h2>
       </div>
-      <div className="border rounded-2xl h-max w-full md:w-[800px] p-6">
+      <div className="border rounded-2xl w-full max-w-[800px] mx-auto p-4 sm:p-6">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -101,7 +103,7 @@ const Register = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col">
-              <label className="text-white">Firstname</label>
+              <label className="text-white text-xs">Firstname</label>
               <input
                 type="text"
                 name="firstname"
@@ -109,7 +111,7 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.firstname || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               {formik.touched.firstname && formik.errors.firstname && (
                 <span className="text-red-500">{formik.errors.firstname}</span>
@@ -117,7 +119,7 @@ const Register = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-white">Surname</label>
+              <label className="text-white text-xs">Surname</label>
               <input
                 type="text"
                 name="surname"
@@ -125,7 +127,7 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.surname || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               {formik.touched.surname && formik.errors.surname && (
                 <span className="text-red-500">{formik.errors.surname}</span>
@@ -133,7 +135,9 @@ const Register = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-white">Email Address (Official)*</label>
+              <label className="text-white text-xs">
+                Email Address (Official)*
+              </label>
               <input
                 type="email"
                 name="email"
@@ -141,7 +145,7 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               {formik.touched.email && formik.errors.email && (
                 <span className="text-red-500">{formik.errors.email}</span>
@@ -149,7 +153,7 @@ const Register = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-white">Company Name</label>
+              <label className="text-white text-xs">Company Name</label>
               <input
                 type="text"
                 name="company"
@@ -157,7 +161,7 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.company || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               {formik.touched.company && formik.errors.company && (
                 <span className="text-red-500">{formik.errors.company}</span>
@@ -165,7 +169,7 @@ const Register = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-white">Country</label>
+              <label className="text-white text-xs">Country</label>
               <input
                 type="text"
                 name="country"
@@ -173,12 +177,12 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.country || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
             </div>
 
             <div className="flex flex-col">
-              <label className="text-white">Postal Code</label>
+              <label className="text-white text-xs">Postal Code</label>
               <input
                 type="text"
                 name="postalCode"
@@ -186,12 +190,12 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.postalCode || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
             </div>
 
             <div className="flex flex-col">
-              <label className="text-white">Designation</label>
+              <label className="text-white text-xs">Designation</label>
               <input
                 type="text"
                 name="designation"
@@ -199,12 +203,12 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.designation || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
             </div>
 
             <div className="flex flex-col">
-              <label className="text-white">Address</label>
+              <label className="text-white text-xs">Address</label>
               <input
                 type="text"
                 name="address"
@@ -212,12 +216,12 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.address || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
             </div>
 
             <div className="flex flex-col">
-              <label className="text-white">Contact Number</label>
+              <label className="text-white text-xs">Contact Number</label>
               <input
                 type="text"
                 name="contactNumber"
@@ -225,11 +229,11 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.contactNumber || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
             </div>
             <div>
-              <label className="text-white">Password</label>
+              <label className="text-white text-xs">Password</label>
               <input
                 type="password"
                 name="password"
@@ -237,7 +241,7 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.password || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               <p className="error">
                 {formik.touched.password && formik.errors.password}
@@ -245,7 +249,7 @@ const Register = () => {
             </div>
 
             <div>
-              <label className="text-white">Confirm Password</label>
+              <label className="text-white text-xs">Confirm Password</label>
               <input
                 type="password"
                 name="confirmPassword"
@@ -253,7 +257,7 @@ const Register = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.confirmPassword || ""}
-                className="h-10 w-full pl-2 text-white rounded-xl border border-gray-400"
+                className="h-10 w-full px-3 text-sm md:text-base text-white rounded-xl border border-gray-400"
               />
               <p className="error">
                 {formik.touched.confirmPassword &&
@@ -265,13 +269,13 @@ const Register = () => {
             {loader ? (
               <SpinnerButton />
             ) : (
-              <Button title="Register" button type="submit" />
+              <Button title="Register" type="submit" />
             )}
           </div>
         </form>
-        <div className="mt-2 flex justify-center items-center cursor-pointer">
-          <span className="text-white">
-            Already have an account ?{" "}
+        <div className="mt-2  flex justify-center items-center cursor-pointer">
+          <span className="text-white text-xs md:text-sm">
+            Have an account ? &nbsp;
             <Link to="/login" className="text-primary">
               Login
             </Link>
