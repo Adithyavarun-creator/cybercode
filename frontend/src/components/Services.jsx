@@ -9,7 +9,9 @@ const Services = () => {
   return (
     <section id="services" className="mt-4 px-8 md:px-12 flex flex-col gap-6">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h2 className="text-3xl text-white font-semibold">Our Services</h2>
+        <h2 className="text-3xl text-white text-center font-semibold">
+          Our Services
+        </h2>
         <span className="sm:text-sm md:text-xl text-gray-500 text-center md:text-start">
           Comprehensive security solutions tailored to protect your enterprise
         </span>

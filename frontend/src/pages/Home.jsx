@@ -14,8 +14,8 @@ const Home = () => {
       <Process />
       <Trust />
       <Questions />
-      {/*  <Team />
-      <Footer /> */}
+      <Team />
+      {/* <Footer />  */}
     </div>
   );
 };
