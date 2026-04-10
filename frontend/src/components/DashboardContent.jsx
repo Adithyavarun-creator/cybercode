@@ -17,7 +17,9 @@ const DashboardContent = () => {
   return (
     <section className="text-white text-2xl mt-20 flex flex-col justify-center items-center gap-4">
       <div className="flex justify-center items-center mt-4">
-        <h2 className="mx-auto">Pick a Plan that benefits you </h2>
+        <h2 className="mx-auto text-xs md:text-xl">
+          Pick a Plan that benefits you{" "}
+        </h2>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 md:gap-10 mt-10">
         <div className="flex flex-col justify-center items-center gap-3 border text-sm border-gray-600 w-[250px] rounded-2xl px-4 py-4 cursor-pointer">
@@ -25,7 +27,7 @@ const DashboardContent = () => {
             <h2 className="text-2xl font-semibold font-secondary">Free</h2>
           </div>
           <div className="flex items-center">
-            <span className="text-gray-400 text-center">
+            <span className="text-sm md:text-xl text-gray-400 text-center">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
               commodi fuga dolor excepturi
             </span>
@@ -54,7 +56,7 @@ const DashboardContent = () => {
             <h2 className="text-2xl font-semibold font-secondary">Elite</h2>
           </div>
           <div className="flex items-center">
-            <span className="text-gray-400 text-center">
+            <span className="text-sm md:text-xl text-gray-400 text-center">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
               commodi fuga dolor excepturi
             </span>
@@ -88,7 +90,7 @@ const DashboardContent = () => {
             <h2 className="text-2xl font-semibold font-secondary">Pro</h2>
           </div>
           <div className="flex items-center">
-            <span className="text-gray-400 text-center">
+            <span className="text-sm md:text-xl text-gray-400 text-center">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
               commodi fuga dolor excepturi
             </span>

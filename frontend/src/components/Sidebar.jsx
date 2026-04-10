@@ -1,8 +1,11 @@
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { FaIcons } from "react-icons/fa6";
+import { useState } from "react";
 
 const Sidebar = () => {
   const user = JSON.parse(localStorage.getItem("user"));
+
+  const [toggle, setToggle] = useState(false);
 
   if (!user) {
     return <Navigate to="/login" />;
@@ -44,27 +47,32 @@ const Sidebar = () => {
         <div className="flex-2"></div>
       </section>
 
-      <section className="flex fixed top-1/2 left-0 -translate-x-0 -translate-y-1/2 md:hidden border items-center px-3 py-6 justify-center border rounded-2xl border-blue-950 h-max w-[100px]">
-        <div className="flex flex-col gap-6">
-          <span>
-            <FaIcons className="h-6 w-6 text-white" />
-          </span>
-          <span>
-            <FaIcons className="h-6 w-6 text-white" />
-          </span>
-          <span>
-            <FaIcons className="h-6 w-6 text-white" />
-          </span>
-          <span>
-            <FaIcons className="h-6 w-6 text-white" />
-          </span>
-          <span>
-            <FaIcons className="h-6 w-6 text-white" />
-          </span>
-          <span>
-            <FaIcons className="h-6 w-6 text-white" />
-          </span>
-        </div>
+      <section
+        onClick={() => setToggle((prev) => !prev)}
+        className={`flex fixed top-1/2 left-0 ${toggle ? "-translate-x-0" : "-translate-x-10"} -translate-y-1/2 md:hidden border items-center px-3 py-6 justify-center border rounded-2xl bg-primary z-100 h-max w-[100px]`}
+      >
+        {toggle && (
+          <div className="flex flex-col gap-6">
+            <Link to="/">
+              <FaIcons className="h-6 w-6 text-white" />
+            </Link>
+            <Link to="/">
+              <FaIcons className="h-6 w-6 text-white" />
+            </Link>
+            <Link to="/">
+              <FaIcons className="h-6 w-6 text-white" />
+            </Link>
+            <Link to="/">
+              <FaIcons className="h-6 w-6 text-white" />
+            </Link>
+            <Link to="/">
+              <FaIcons className="h-6 w-6 text-white" />
+            </Link>
+            <Link to="/">
+              <FaIcons className="h-6 w-6 text-white" />
+            </Link>
+          </div>
+        )}
       </section>
     </>
   );

@@ -228,12 +228,21 @@ shadow-lg fixed top-0 left-0 w-full z-50"
               </a>
 
               {user && (
-                <span
-                  className="text-white text-xl sm:text-2xl font-semibold"
-                  onClick={handleLogout}
-                >
-                  Logout
-                </span>
+                <>
+                  <Link
+                    onClick={() => setMobileNav(false)}
+                    to="/user-dashboard"
+                    className="text-white text-xl sm:text-2xl font-semibold"
+                  >
+                    Dashboard
+                  </Link>
+                  <span
+                    className="text-white text-xl sm:text-2xl font-semibold"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </span>
+                </>
               )}
             </div>
           </div>
