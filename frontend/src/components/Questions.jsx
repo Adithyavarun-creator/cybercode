@@ -12,10 +12,10 @@ const Questions = () => {
   return (
     <section className="mt-10 px-12 flex flex-col gap-6">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h2 className="text-3xl text-white font-semibold">
+        <h2 className="text-sm md:text-3xl text-white text-center font-semibold">
           Frequently Asked Questions
         </h2>
-        <span className="text-xl text-gray-500 text-center md:text-start">
+        <span className="text-sm md:text-xl text-gray-500 text-center md:text-start">
           Find answers to common questions about our services and security
           solutions
         </span>
