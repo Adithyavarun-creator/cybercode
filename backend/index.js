@@ -37,9 +37,18 @@ app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 // app.use("/api/listing", listingRoute);
 
+// app.get("/", (req, res) => {
+//   res.send("API is running on live 🚀");
+// });
+
+app.use(express.static(path.join(__dirname, "public")));
+
+// your existing route
 app.get("/", (req, res) => {
-  res.send("API is running on live 🚀");
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
+app.listen(5000, () => console.log("Server running"));
 
 //middlewares
 app.use((err, req, res, next) => {
