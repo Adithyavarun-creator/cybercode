@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const api = "http://localhost:5000/api/";
+// const api = "http://localhost:5000/api/";
+
+//cybercode-n2cp.onrender.com/
+const api = "https://cybercode-n2cp.onrender.com/";
 
 export const registerUser = async (data) => {
   const res = await axios.post(`${api}auth/signup`, data);
