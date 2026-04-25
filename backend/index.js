@@ -20,12 +20,20 @@ const app = express();
 
 // app.use(cors());
 
+// app.use(
+//   cors({
+//     origin: "http://localhost:5173",
+//     credentials: true,
+//   }),
+// );
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://cybercode-livid.vercel.app"],
     credentials: true,
   }),
 );
+
 app.listen(5000, () => {
   console.log("Server running on 5000 🚀🚀🚀");
 });
