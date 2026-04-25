@@ -3,6 +3,7 @@ import axios from "axios";
 // const api = "http://localhost:5000/api/";
 
 //cybercode-n2cp.onrender.com/
+// const api = "https://cybercode-n2cp.onrender.com/api/";
 const api = "https://cybercode-n2cp.onrender.com/api/";
 
 export const registerUser = async (data) => {
